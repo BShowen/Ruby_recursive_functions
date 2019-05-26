@@ -1,0 +1,3 @@
+# These are my recursive functions along with the instructions for each of them. I am following along the curriculum at [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/recursion?ref=lnav)
+
+### There are no real instructions for using this script. If you would like to try out one of my functions you can simply open the .rb file by clicking on it and copy and pasting a function into IRB on your computer. 
