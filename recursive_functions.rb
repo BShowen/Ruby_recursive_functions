@@ -44,8 +44,8 @@ end
 #Define a functiion that accepts an array and number. The function then appends a digit to the end of the array starting from the provided digit all the way down to zero. 
 # append([10],5)           #=> [10,5,4,3,2,10] 
 # append([5],10)           #=> [5,10,9,8,7,6,5,4,3,2,1,0]
-# append([10,9,8],7)     #=> [10,9,8,7,6,5,4,3,2,1,0]
-def append(arr,n) 
+# append([10,9,8],7)       #=> [10,9,8,7,6,5,4,3,2,1,0]
+def append(arr,n)  
     return arr << n  if n == 0
     arr << n 
     append(arr,n-1)
@@ -54,8 +54,8 @@ end
 
 #Define a functiion that accepts an array and number. The function then appends a digit to the end of the array starting from the zero digit all the way up to the included digit.
 # reverse_append([3],5)              #=> [3,0,1,2,3,4,5]
-# reverse_append([7,8],4)           #=> [7,8,0,1,2,3,4]
-# reverse_append([0,4,3],9)       #=> [0,4,3,0,1,2,3,4,5,6,7,8,9]
+# reverse_append([7,8],4)            #=> [7,8,0,1,2,3,4]
+# reverse_append([0,4,3],9)          #=> [0,4,3,0,1,2,3,4,5,6,7,8,9]
 def reverse_append arr,n 
     return (arr << n).reverse if n == 0 || n < 0
     arr << n 
@@ -63,10 +63,10 @@ def reverse_append arr,n
 end
 
 # This is the above two methods but theyre extending the Array class instead of being standalone functions. 
-# [1,2,3].append(4)               #=> [1,2,3,0,1,2,3,4]
-# [0,3].append(6)                  #=> [0,3,0,1,2,3,4,5,6]
-# [2].reverse_append(4)       #=> [2,4,3,2,1]
-# [10].reverse_append(9)     #=> [10,9,8,7,6,5,4,3,2,1,0]
+# [1,2,3].append(4)             #=> [1,2,3,0,1,2,3,4]
+# [0,3].append(6)               #=> [0,3,0,1,2,3,4,5,6]
+# [2].reverse_append(4)         #=> [2,4,3,2,1]
+# [10].reverse_append(9)        #=> [10,9,8,7,6,5,4,3,2,1,0]
 class Array
     def append n 
         return self << n  if n == 0
@@ -93,8 +93,8 @@ def factorial n
 end
 
 # Define a recursive function that returns true if a string is a palindrome and false otherwise.
-# pal? "racecar"             #=> true
-# pal? "programming"   #=> false
+# pal? "racecar"      #=> true
+# pal? "programming"  #=> false
 def pal? string
     if string.length == 1 || string.length == 0
         true
@@ -115,18 +115,6 @@ def bottles n
     end
 end
 
-# def fib_loop n
-#     arr = [0,1]
-#     if n == 0
-#         return 0
-#     else
-#         (n-1).times do 
-#             arr << arr[-1] + arr[-2]
-#         end
-#     end
-#     arr[-1]
-# end
-
 # Define a recursive function that takes an argument n and returns the fibonacci value of that position. The fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21... So fib(5) should return 5, fib(6) should return 8.
 def fib n
     if n == 0
@@ -136,6 +124,20 @@ def fib n
     else
         fib(n-1) + fib(n-2)
     end
+end
+
+
+# This is the fib sequence performed with iteration. 
+def fib_loop n
+    arr = [0,1]
+    if n == 0
+        return 0
+    else
+        (n-1).times do 
+            arr << arr[-1] + arr[-2]
+        end
+    end
+    arr[-1]
 end
 
 
