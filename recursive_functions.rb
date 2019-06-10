@@ -42,7 +42,7 @@ end
 
 
 #Define a functiion that accepts an array and number. The function then appends a digit to the end of the array starting from the provided digit all the way down to zero. 
-# append([10],5)           #=> [10,5,4,3,2,10] 
+# append([10],5)           #=> [10,5,4,3,2,1,0] 
 # append([5],10)           #=> [5,10,9,8,7,6,5,4,3,2,1,0]
 # append([10,9,8],7)       #=> [10,9,8,7,6,5,4,3,2,1,0]
 def append(arr,n)  
